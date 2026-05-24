@@ -2,298 +2,164 @@ const QUESTIONS_PER_PAGE = 6;
 
 const questions = [
   // PAGE 1 - Geography & Counties
-  {
-    id: 1, category: "Geography", reward: 45,
-    question: "How many counties does Kenya have?",
-    options: ["42 counties", "47 counties", "46 counties", "50 counties"],
-    correctIndex: 1,
-    explanation: "Kenya has 47 counties established under the 2010 Constitution."
-  },
-  {
-    id: 2, category: "Geography", reward: 30,
-    question: "Which is the largest county by area in Kenya?",
-    options: ["Nairobi", "Turkana", "Marsabit", "Mandera"],
-    correctIndex: 1,
-    explanation: "Turkana County is the largest county in Kenya by land area."
-  },
-  {
-    id: 3, category: "Geography", reward: 35,
-    question: "Which lake is shared between Kenya, Uganda, and Tanzania?",
-    options: ["Lake Turkana", "Lake Naivasha", "Lake Victoria", "Lake Baringo"],
-    correctIndex: 2,
-    explanation: "Lake Victoria is the largest lake in Africa and is shared by Kenya, Uganda, and Tanzania."
-  },
-  {
-    id: 4, category: "Geography", reward: 40,
-    question: "What is the capital city of Kenya?",
-    options: ["Mombasa", "Kisumu", "Nairobi", "Nakuru"],
-    correctIndex: 2,
-    explanation: "Nairobi is the capital and largest city of Kenya."
-  },
-  {
-    id: 5, category: "Geography", reward: 50,
-    question: "Which mountain is the highest point in Kenya?",
-    options: ["Mount Elgon", "Aberdare Range", "Mount Kenya", "Ol Doinyo Lengai"],
-    correctIndex: 2,
-    explanation: "Mount Kenya at 5,199 meters is the highest mountain in Kenya."
-  },
-  {
-    id: 6, category: "Geography", reward: 60,
-    question: "The Great Rift Valley runs through Kenya from which direction?",
-    options: ["East to West", "North to South", "Northeast to Southwest", "Northwest to Southeast"],
-    correctIndex: 1,
-    explanation: "The Great Rift Valley runs roughly north to south through Kenya."
-  },
+  { id: 1, category: "Geography", reward: 45, question: "How many counties does Kenya have?", options: ["42 counties", "47 counties", "46 counties", "50 counties"], correctIndex: 1, explanation: "Kenya has 47 counties established under the 2010 Constitution." },
+  { id: 2, category: "Geography", reward: 30, question: "Which is the largest county by area in Kenya?", options: ["Nairobi", "Turkana", "Marsabit", "Mandera"], correctIndex: 1, explanation: "Turkana County is the largest county in Kenya by land area." },
+  { id: 3, category: "Geography", reward: 35, question: "Which lake is shared between Kenya, Uganda, and Tanzania?", options: ["Lake Turkana", "Lake Naivasha", "Lake Victoria", "Lake Baringo"], correctIndex: 2, explanation: "Lake Victoria is the largest lake in Africa and is shared by Kenya, Uganda, and Tanzania." },
+  { id: 4, category: "Geography", reward: 40, question: "What is the capital city of Kenya?", options: ["Mombasa", "Kisumu", "Nairobi", "Nakuru"], correctIndex: 2, explanation: "Nairobi is the capital and largest city of Kenya." },
+  { id: 5, category: "Geography", reward: 50, question: "Which mountain is the highest point in Kenya?", options: ["Mount Elgon", "Aberdare Range", "Mount Kenya", "Ol Doinyo Lengai"], correctIndex: 2, explanation: "Mount Kenya at 5,199 meters is the highest mountain in Kenya." },
+  { id: 6, category: "Geography", reward: 60, question: "The Great Rift Valley runs through Kenya from which direction?", options: ["East to West", "North to South", "Northeast to Southwest", "Northwest to Southeast"], correctIndex: 1, explanation: "The Great Rift Valley runs roughly north to south through Kenya." },
 
   // PAGE 2 - History & Government
-  {
-    id: 7, category: "History", reward: 35,
-    question: "In which year did Kenya gain independence from Britain?",
-    options: ["1960", "1961", "1963", "1965"],
-    correctIndex: 2,
-    explanation: "Kenya gained independence on December 12, 1963, now celebrated as Jamhuri Day."
-  },
-  {
-    id: 8, category: "History", reward: 40,
-    question: "Who was Kenya's first President?",
-    options: ["Daniel Arap Moi", "Jomo Kenyatta", "Oginga Odinga", "Tom Mboya"],
-    correctIndex: 1,
-    explanation: "Jomo Kenyatta was Kenya's first President, serving from 1964 to 1978."
-  },
-  {
-    id: 9, category: "Government", reward: 45,
-    question: "What is the name of Kenya's national assembly lower house?",
-    options: ["Senate", "Cabinet", "National Assembly", "County Assembly"],
-    correctIndex: 2,
-    explanation: "The National Assembly is the lower house of Kenya's bicameral Parliament."
-  },
-  {
-    id: 10, category: "Government", reward: 55,
-    question: "Under Kenya's constitution, how long is a presidential term?",
-    options: ["4 years", "5 years", "6 years", "7 years"],
-    correctIndex: 1,
-    explanation: "A presidential term in Kenya is 5 years, and a president can serve a maximum of two terms."
-  },
-  {
-    id: 11, category: "History", reward: 65,
-    question: "The Mau Mau uprising was primarily a resistance against which colonial power?",
-    options: ["France", "Germany", "Britain", "Portugal"],
-    correctIndex: 2,
-    explanation: "The Mau Mau uprising (1952-1960) was a rebellion against British colonial rule."
-  },
-  {
-    id: 12, category: "Government", reward: 50,
-    question: "Which year was Kenya's current constitution promulgated?",
-    options: ["2008", "2009", "2010", "2012"],
-    correctIndex: 2,
-    explanation: "Kenya's Constitution of 2010 was promulgated on August 27, 2010."
-  },
+  { id: 7, category: "History", reward: 35, question: "In which year did Kenya gain independence from Britain?", options: ["1960", "1961", "1963", "1965"], correctIndex: 2, explanation: "Kenya gained independence on December 12, 1963, now celebrated as Jamhuri Day." },
+  { id: 8, category: "History", reward: 40, question: "Who was Kenya's first President?", options: ["Daniel Arap Moi", "Jomo Kenyatta", "Oginga Odinga", "Tom Mboya"], correctIndex: 1, explanation: "Jomo Kenyatta was Kenya's first President, serving from 1964 to 1978." },
+  { id: 9, category: "Government", reward: 45, question: "What is the name of Kenya's national assembly lower house?", options: ["Senate", "Cabinet", "National Assembly", "County Assembly"], correctIndex: 2, explanation: "The National Assembly is the lower house of Kenya's bicameral Parliament." },
+  { id: 10, category: "Government", reward: 55, question: "Under Kenya's constitution, how long is a presidential term?", options: ["4 years", "5 years", "6 years", "7 years"], correctIndex: 1, explanation: "A presidential term in Kenya is 5 years, and a president can serve a maximum of two terms." },
+  { id: 11, category: "History", reward: 65, question: "The Mau Mau uprising was primarily a resistance against which colonial power?", options: ["France", "Germany", "Britain", "Portugal"], correctIndex: 2, explanation: "The Mau Mau uprising (1952-1960) was a rebellion against British colonial rule." },
+  { id: 12, category: "Government", reward: 50, question: "Which year was Kenya's current constitution promulgated?", options: ["2008", "2009", "2010", "2012"], correctIndex: 2, explanation: "Kenya's Constitution of 2010 was promulgated on August 27, 2010." },
 
   // PAGE 3 - Culture & Society
-  {
-    id: 13, category: "Culture", reward: 30,
-    question: "What is the national language of Kenya?",
-    options: ["English", "Swahili", "Luo", "Kikuyu"],
-    correctIndex: 1,
-    explanation: "Swahili (Kiswahili) is Kenya's national language, while English is the official language."
-  },
-  {
-    id: 14, category: "Culture", reward: 35,
-    question: "What does 'Harambee' mean in Swahili?",
-    options: ["Independence", "Pulling together", "Freedom", "Unity"],
-    correctIndex: 1,
-    explanation: "Harambee means 'pulling together' and is Kenya's national motto."
-  },
-  {
-    id: 15, category: "Culture", reward: 45,
-    question: "Which ethnic community is associated with the Maasai Mara reserve area?",
-    options: ["Kikuyu", "Luo", "Maasai", "Kalenjin"],
-    correctIndex: 2,
-    explanation: "The Maasai people have traditionally inhabited the Maasai Mara area."
-  },
-  {
-    id: 16, category: "Culture", reward: 40,
-    question: "Ugali is a staple food in Kenya made from which ingredient?",
-    options: ["Rice flour", "Wheat flour", "Maize flour", "Sorghum flour"],
-    correctIndex: 2,
-    explanation: "Ugali is made from maize (corn) flour and is a staple across Kenya."
-  },
-  {
-    id: 17, category: "Culture", reward: 55,
-    question: "Which traditional Kikuyu musical instrument produces sound by plucking?",
-    options: ["Drum", "Litungu", "Gicandi", "Wandindi"],
-    correctIndex: 2,
-    explanation: "The Gicandi is a traditional Kikuyu instrument, though the Litungu is a Luyha lyre."
-  },
-  {
-    id: 18, category: "Culture", reward: 50,
-    question: "What is the traditional Maasai jumping dance called?",
-    options: ["Chakacha", "Adumu", "Ohangla", "Giriama"],
-    correctIndex: 1,
-    explanation: "Adumu is the traditional Maasai jumping dance performed by young warriors."
-  },
+  { id: 13, category: "Culture", reward: 30, question: "What is the national language of Kenya?", options: ["English", "Swahili", "Luo", "Kikuyu"], correctIndex: 1, explanation: "Swahili (Kiswahili) is Kenya's national language, while English is the official language." },
+  { id: 14, category: "Culture", reward: 35, question: "What does 'Harambee' mean in Swahili?", options: ["Independence", "Pulling together", "Freedom", "Unity"], correctIndex: 1, explanation: "Harambee means 'pulling together' and is Kenya's national motto." },
+  { id: 15, category: "Culture", reward: 45, question: "Which ethnic community is associated with the Maasai Mara reserve area?", options: ["Kikuyu", "Luo", "Maasai", "Kalenjin"], correctIndex: 2, explanation: "The Maasai people have traditionally inhabited the Maasai Mara area." },
+  { id: 16, category: "Culture", reward: 40, question: "Ugali is a staple food in Kenya made from which ingredient?", options: ["Rice flour", "Wheat flour", "Maize flour", "Sorghum flour"], correctIndex: 2, explanation: "Ugali is made from maize (corn) flour and is a staple across Kenya." },
+  { id: 17, category: "Culture", reward: 55, question: "What is the traditional Maasai jumping dance called?", options: ["Chakacha", "Adumu", "Ohangla", "Giriama"], correctIndex: 1, explanation: "Adumu is the traditional Maasai jumping dance performed by young warriors." },
+  { id: 18, category: "Culture", reward: 50, question: "Which Kenyan coastal community is famous for the Taarab music genre?", options: ["Mijikenda", "Swahili people of Mombasa", "Taita", "Giriama"], correctIndex: 1, explanation: "Taarab music is deeply rooted in the Swahili coastal culture, especially in Mombasa." },
 
   // PAGE 4 - Economy & Business
-  {
-    id: 19, category: "Economy", reward: 40,
-    question: "Which cash crop is Kenya's leading export earner?",
-    options: ["Coffee", "Tea", "Flowers", "Cotton"],
-    correctIndex: 1,
-    explanation: "Tea is Kenya's largest export earner, with Kenya being among the world's top tea producers."
-  },
-  {
-    id: 20, category: "Economy", reward: 45,
-    question: "What is the name of Kenya's mobile money service by Safaricom?",
-    options: ["Airtel Money", "M-Pesa", "T-Kash", "MobiKash"],
-    correctIndex: 1,
-    explanation: "M-Pesa, launched in 2007, is Safaricom's mobile money transfer service."
-  },
-  {
-    id: 21, category: "Economy", reward: 60,
-    question: "The Nairobi Securities Exchange is located in which area of Nairobi?",
-    options: ["Westlands", "Karen", "Upper Hill", "Industrial Area"],
-    correctIndex: 2,
-    explanation: "The Nairobi Securities Exchange (NSE) is located in Upper Hill, Nairobi."
-  },
-  {
-    id: 22, category: "Economy", reward: 50,
-    question: "Kenya's currency is called the Kenya Shilling. What is its symbol?",
-    options: ["KES", "KSh", "Both KES and KSh are used", "Ksh only"],
-    correctIndex: 2,
-    explanation: "Both KES (international code) and KSh (local symbol) are used for the Kenya Shilling."
-  },
-  {
-    id: 23, category: "Economy", reward: 70,
-    question: "Silicon Savannah refers to Kenya's growing tech hub in which city?",
-    options: ["Mombasa", "Kisumu", "Nairobi", "Nakuru"],
-    correctIndex: 2,
-    explanation: "Nairobi is called Silicon Savannah due to its thriving technology and startup ecosystem."
-  },
-  {
-    id: 24, category: "Economy", reward: 55,
-    question: "Which port city is Kenya's main gateway for imports and exports?",
-    options: ["Malindi", "Lamu", "Mombasa", "Kilifi"],
-    correctIndex: 2,
-    explanation: "Mombasa Port is East Africa's largest seaport and Kenya's main trade gateway."
-  },
+  { id: 19, category: "Economy", reward: 40, question: "Which cash crop is Kenya's leading export earner?", options: ["Coffee", "Tea", "Flowers", "Cotton"], correctIndex: 1, explanation: "Tea is Kenya's largest export earner, with Kenya being among the world's top tea producers." },
+  { id: 20, category: "Economy", reward: 45, question: "What is the name of Kenya's mobile money service by Safaricom?", options: ["Airtel Money", "M-Pesa", "T-Kash", "MobiKash"], correctIndex: 1, explanation: "M-Pesa, launched in 2007, is Safaricom's mobile money transfer service." },
+  { id: 21, category: "Economy", reward: 60, question: "The Nairobi Securities Exchange is located in which area of Nairobi?", options: ["Westlands", "Karen", "Upper Hill", "Industrial Area"], correctIndex: 2, explanation: "The Nairobi Securities Exchange (NSE) is located in Upper Hill, Nairobi." },
+  { id: 22, category: "Economy", reward: 50, question: "Kenya's currency symbol is KSh. What does KES stand for?", options: ["Kenya Economic Shilling", "Kenya Exchange Standard", "Kenya Shilling (ISO code)", "Kenyan Estate Shilling"], correctIndex: 2, explanation: "KES is the ISO 4217 international currency code for the Kenya Shilling." },
+  { id: 23, category: "Economy", reward: 70, question: "Silicon Savannah refers to Kenya's growing tech hub in which city?", options: ["Mombasa", "Kisumu", "Nairobi", "Nakuru"], correctIndex: 2, explanation: "Nairobi is called Silicon Savannah due to its thriving technology and startup ecosystem." },
+  { id: 24, category: "Economy", reward: 55, question: "Which port city is Kenya's main gateway for imports and exports?", options: ["Malindi", "Lamu", "Mombasa", "Kilifi"], correctIndex: 2, explanation: "Mombasa Port is East Africa's largest seaport and Kenya's main trade gateway." },
 
   // PAGE 5 - Sports & Athletics
-  {
-    id: 25, category: "Sports", reward: 35,
-    question: "In which year did Eliud Kipchoge break the 2-hour marathon barrier?",
-    options: ["2017", "2018", "2019", "2020"],
-    correctIndex: 2,
-    explanation: "Eliud Kipchoge ran 1:59:40 in Vienna on October 12, 2019 (unofficial record)."
-  },
-  {
-    id: 26, category: "Sports", reward: 40,
-    question: "What is Kenya's national football team called?",
-    options: ["Super Eagles", "Harambee Stars", "Simba FC", "Safari Lions"],
-    correctIndex: 1,
-    explanation: "Kenya's national football team is called Harambee Stars."
-  },
-  {
-    id: 27, category: "Sports", reward: 50,
-    question: "Which Kenyan athlete won the 800m gold at the 2012 London Olympics?",
-    options: ["Wilson Kipketer", "David Rudisha", "Noah Ngeny", "Alfred Kirwa Yego"],
-    correctIndex: 1,
-    explanation: "David Rudisha won the 800m gold at London 2012, also setting a world record of 1:40.91."
-  },
-  {
-    id: 28, category: "Sports", reward: 45,
-    question: "Kenya's Rift Valley region is known for producing elite runners. Which county is called the 'home of champions'?",
-    options: ["Uasin Gishu", "Nandi", "Elgeyo-Marakwet", "Kericho"],
-    correctIndex: 1,
-    explanation: "Nandi County is widely referred to as the 'home of champions' for producing world-class runners."
-  },
-  {
-    id: 29, category: "Sports", reward: 60,
-    question: "The Safari Rally, held in Kenya, is part of which international motorsport championship?",
-    options: ["Formula One", "World Rally Championship", "Dakar Rally", "Africa Rally Cup"],
-    correctIndex: 1,
-    explanation: "The Safari Rally Kenya is part of the FIA World Rally Championship (WRC)."
-  },
-  {
-    id: 30, category: "Sports", reward: 55,
-    question: "Which stadium is the home of Kenya's national football team in Nairobi?",
-    options: ["City Stadium", "Kasarani Stadium", "Nyayo National Stadium", "Bukhungu Stadium"],
-    correctIndex: 2,
-    explanation: "Nyayo National Stadium is the primary venue for Kenya's national football team."
-  },
+  { id: 25, category: "Sports", reward: 35, question: "In which year did Eliud Kipchoge break the 2-hour marathon barrier?", options: ["2017", "2018", "2019", "2020"], correctIndex: 2, explanation: "Eliud Kipchoge ran 1:59:40 in Vienna on October 12, 2019." },
+  { id: 26, category: "Sports", reward: 40, question: "What is Kenya's national football team called?", options: ["Super Eagles", "Harambee Stars", "Simba FC", "Safari Lions"], correctIndex: 1, explanation: "Kenya's national football team is called Harambee Stars." },
+  { id: 27, category: "Sports", reward: 50, question: "Which Kenyan athlete won the 800m gold at the 2012 London Olympics?", options: ["Wilson Kipketer", "David Rudisha", "Noah Ngeny", "Alfred Kirwa Yego"], correctIndex: 1, explanation: "David Rudisha won the 800m gold at London 2012, also setting a world record of 1:40.91." },
+  { id: 28, category: "Sports", reward: 45, question: "Which county in Kenya is called the 'home of champions' for athletics?", options: ["Uasin Gishu", "Nandi", "Elgeyo-Marakwet", "Kericho"], correctIndex: 1, explanation: "Nandi County is widely referred to as the 'home of champions' for producing world-class runners." },
+  { id: 29, category: "Sports", reward: 60, question: "The Safari Rally is part of which international motorsport championship?", options: ["Formula One", "World Rally Championship", "Dakar Rally", "Africa Rally Cup"], correctIndex: 1, explanation: "The Safari Rally Kenya is part of the FIA World Rally Championship (WRC)." },
+  { id: 30, category: "Sports", reward: 55, question: "Which stadium is the home of Kenya's national football team in Nairobi?", options: ["City Stadium", "Kasarani Stadium", "Nyayo National Stadium", "Bukhungu Stadium"], correctIndex: 2, explanation: "Nyayo National Stadium is the primary venue for Kenya's national football team." },
 
   // PAGE 6 - Environment & Wildlife
-  {
-    id: 31, category: "Wildlife", reward: 40,
-    question: "Which Kenyan national park is famous for the annual wildebeest migration?",
-    options: ["Amboseli", "Tsavo East", "Maasai Mara", "Lake Nakuru"],
-    correctIndex: 2,
-    explanation: "The Maasai Mara hosts the spectacular annual wildebeest migration from Tanzania's Serengeti."
-  },
-  {
-    id: 32, category: "Wildlife", reward: 45,
-    question: "What is the name of Kenya's flagship anti-poaching initiative?",
-    options: ["Operation Ivory", "Northern Rangelands Trust", "Kenya Wildlife Service", "Big Five Guard"],
-    correctIndex: 2,
-    explanation: "The Kenya Wildlife Service (KWS) is the government agency managing wildlife conservation and anti-poaching."
-  },
-  {
-    id: 33, category: "Environment", reward: 55,
-    question: "The Wangari Maathai Institute is named after Kenya's Nobel Peace Prize winner. What year did she win the prize?",
-    options: ["2000", "2002", "2004", "2006"],
-    correctIndex: 2,
-    explanation: "Wangari Maathai won the Nobel Peace Prize in 2004 for her contribution to sustainable development."
-  },
-  {
-    id: 34, category: "Wildlife", reward: 50,
-    question: "Which endangered rhino subspecies is found at Ol Pejeta Conservancy in Kenya?",
-    options: ["Black rhino", "White rhino", "Northern white rhino", "Indian rhino"],
-    correctIndex: 2,
-    explanation: "Ol Pejeta hosts the last two northern white rhinos in the world."
-  },
-  {
-    id: 35, category: "Environment", reward: 65,
-    question: "Lake Nakuru is famous for which bird species?",
-    options: ["Eagles", "Flamingos", "Pelicans", "Storks"],
-    correctIndex: 1,
-    explanation: "Lake Nakuru is famous for its flocks of flamingos, though numbers have varied with water levels."
-  },
-  {
-    id: 36, category: "Wildlife", reward: 70,
-    question: "What percentage of Kenya's land is protected as national parks and reserves?",
-    options: ["5%", "8%", "12%", "20%"],
-    correctIndex: 2,
-    explanation: "Approximately 12% of Kenya's land area is protected as national parks, reserves, and sanctuaries."
-  },
+  { id: 31, category: "Wildlife", reward: 40, question: "Which Kenyan national park is famous for the annual wildebeest migration?", options: ["Amboseli", "Tsavo East", "Maasai Mara", "Lake Nakuru"], correctIndex: 2, explanation: "The Maasai Mara hosts the spectacular annual wildebeest migration from Tanzania's Serengeti." },
+  { id: 32, category: "Wildlife", reward: 45, question: "Which government agency manages wildlife conservation in Kenya?", options: ["Operation Ivory", "Northern Rangelands Trust", "Kenya Wildlife Service", "Big Five Guard"], correctIndex: 2, explanation: "The Kenya Wildlife Service (KWS) is the government agency managing wildlife conservation." },
+  { id: 33, category: "Environment", reward: 55, question: "What year did Wangari Maathai win the Nobel Peace Prize?", options: ["2000", "2002", "2004", "2006"], correctIndex: 2, explanation: "Wangari Maathai won the Nobel Peace Prize in 2004 for her contribution to sustainable development." },
+  { id: 34, category: "Wildlife", reward: 50, question: "Which endangered rhino subspecies is found at Ol Pejeta Conservancy?", options: ["Black rhino", "White rhino", "Northern white rhino", "Indian rhino"], correctIndex: 2, explanation: "Ol Pejeta hosts the last two northern white rhinos in the world." },
+  { id: 35, category: "Environment", reward: 65, question: "Lake Nakuru is famous for which bird species?", options: ["Eagles", "Flamingos", "Pelicans", "Storks"], correctIndex: 1, explanation: "Lake Nakuru is famous for its flocks of flamingos." },
+  { id: 36, category: "Wildlife", reward: 70, question: "Approximately what percentage of Kenya's land is protected as national parks and reserves?", options: ["5%", "8%", "12%", "20%"], correctIndex: 2, explanation: "Approximately 12% of Kenya's land area is protected as national parks, reserves, and sanctuaries." },
 
   // PAGE 7 - Education & Health
-  {
-    id: 37, category: "Education", reward: 45,
-    question: "What does CBC stand for in Kenya's education system?",
-    options: ["Central Based Curriculum", "Competency Based Curriculum", "Community Based Curriculum", "County Based Curriculum"],
-    correctIndex: 1,
-    explanation: "CBC stands for Competency Based Curriculum, introduced in Kenya to replace the 8-4-4 system."
-  },
-  {
-    id: 38, category: "Education", reward: 50,
-    question: "Which is Kenya's oldest and largest public university?",
-    options: ["Kenyatta University", "Moi University", "University of Nairobi", "Jomo Kenyatta University"],
-    correctIndex: 2,
-    explanation: "The University of Nairobi, founded in 1956, is Kenya's oldest and largest public university."
-  },
-  {
-    id: 39, category: "Health", reward: 60,
-    question: "What is the government health insurance scheme in Kenya called?",
-    options: ["NHIF", "SHIF", "NSSF", "Jubilee Health"],
-    correctIndex: 0,
-    explanation: "NHIF (National Hospital Insurance Fund) is Kenya's government health insurance scheme, being transitioned to SHIF."
-  },
-  {
-    id: 40, category: "Health", reward: 100,
-    question: "Which Kenyan institution is responsible for regulating pharmaceutical drugs and medical devices?",
-    options: ["MOH", "KEBS", "KEPHIS", "PPB"],
-    correctIndex: 3,
-    explanation: "The Pharmacy and Poisons Board (PPB), now called KEBS pharmacy division, regulates pharmaceuticals in Kenya."
-  },
+  { id: 37, category: "Education", reward: 45, question: "What does CBC stand for in Kenya's education system?", options: ["Central Based Curriculum", "Competency Based Curriculum", "Community Based Curriculum", "County Based Curriculum"], correctIndex: 1, explanation: "CBC stands for Competency Based Curriculum, introduced to replace the 8-4-4 system." },
+  { id: 38, category: "Education", reward: 50, question: "Which is Kenya's oldest and largest public university?", options: ["Kenyatta University", "Moi University", "University of Nairobi", "Jomo Kenyatta University"], correctIndex: 2, explanation: "The University of Nairobi, founded in 1956, is Kenya's oldest and largest public university." },
+  { id: 39, category: "Health", reward: 60, question: "What is the government health insurance scheme in Kenya called?", options: ["NHIF", "SHIF", "NSSF", "Jubilee Health"], correctIndex: 0, explanation: "NHIF (National Hospital Insurance Fund) is Kenya's government health insurance scheme." },
+  { id: 40, category: "Health", reward: 100, question: "Which Kenyan body is responsible for regulating pharmaceutical drugs?", options: ["MOH", "KEBS", "KEPHIS", "PPB"], correctIndex: 3, explanation: "The Pharmacy and Poisons Board (PPB) regulates pharmaceuticals in Kenya." },
+
+  // PAGE 8 - Kenyan Daily Life
+  { id: 41, category: "Daily Life", reward: 35, question: "What is the name of the popular Kenyan fermented milk drink?", options: ["Mursik", "Uji", "Maharagwe", "Githeri"], correctIndex: 0, explanation: "Mursik is a fermented milk drink popular among the Kalenjin community." },
+  { id: 42, category: "Daily Life", reward: 30, question: "Matatus in Kenya are primarily used for what purpose?", options: ["Transporting goods", "Public transport", "Ambulance service", "Police patrol"], correctIndex: 1, explanation: "Matatus are privately-owned minibuses used for public transport across Kenya." },
+  { id: 43, category: "Daily Life", reward: 40, question: "What is 'Githeri' in Kenyan cuisine?", options: ["A type of bread", "A mix of boiled maize and beans", "Grilled meat", "A rice dish"], correctIndex: 1, explanation: "Githeri is a traditional Kenyan dish made of boiled maize and beans, popular across communities." },
+  { id: 44, category: "Daily Life", reward: 45, question: "Which network provides the most mobile users in Kenya?", options: ["Airtel", "Telkom", "Safaricom", "Faiba"], correctIndex: 2, explanation: "Safaricom is Kenya's largest mobile network operator by subscriber base." },
+  { id: 45, category: "Daily Life", reward: 35, question: "What is the local Kenyan term for a small neighbourhood shop?", options: ["Duka", "Kibanda", "Kiosk", "Sokoni"], correctIndex: 0, explanation: "A 'duka' is the Swahili word for a small local shop, common across Kenya." },
+  { id: 46, category: "Daily Life", reward: 50, question: "What does 'Karibu' mean in Swahili?", options: ["Goodbye", "Thank you", "Welcome", "Please"], correctIndex: 2, explanation: "Karibu means 'welcome' in Swahili and is a common greeting across Kenya." },
+
+  // PAGE 9 - Kenyan Politics & Leaders
+  { id: 47, category: "Politics", reward: 50, question: "Who was Kenya's second President?", options: ["Mwai Kibaki", "Daniel Arap Moi", "Uhuru Kenyatta", "Raila Odinga"], correctIndex: 1, explanation: "Daniel Arap Moi was Kenya's second President, serving from 1978 to 2002." },
+  { id: 48, category: "Politics", reward: 45, question: "In which year did Kenya hold its first multi-party elections?", options: ["1990", "1991", "1992", "1995"], correctIndex: 2, explanation: "Kenya held its first multi-party elections in December 1992." },
+  { id: 49, category: "Politics", reward: 55, question: "What is the name of Kenya's parliament building?", options: ["Bunge House", "Parliament Buildings", "State House Annex", "National Assembly Hall"], correctIndex: 1, explanation: "Kenya's parliament meets at the Parliament Buildings on Parliament Road in Nairobi." },
+  { id: 50, category: "Politics", reward: 40, question: "Who is the head of the county government in Kenya?", options: ["Senator", "Member of Parliament", "Governor", "County Commissioner"], correctIndex: 2, explanation: "The Governor is the elected head of the county government in each of Kenya's 47 counties." },
+  { id: 51, category: "Politics", reward: 60, question: "What is Kenya's Independence Day called?", options: ["Madaraka Day", "Jamhuri Day", "Mashujaa Day", "Labour Day"], correctIndex: 1, explanation: "Jamhuri Day, celebrated on December 12, marks Kenya's Independence Day and Republic Day." },
+  { id: 52, category: "Politics", reward: 45, question: "Madaraka Day in Kenya is celebrated on which date?", options: ["June 1", "December 12", "October 20", "May 1"], correctIndex: 0, explanation: "Madaraka Day is celebrated on June 1, marking when Kenya attained internal self-rule in 1963." },
+
+  // PAGE 10 - Kenyan Music & Entertainment
+  { id: 53, category: "Entertainment", reward: 35, question: "Which Kenyan musician is known as the 'king of benga' music?", options: ["Ayub Ogada", "D.O Misiani", "Daudi Kabaka", "John Nzenze"], correctIndex: 1, explanation: "D.O Misiani was one of the pioneers of benga music and is highly regarded in Kenyan music." },
+  { id: 54, category: "Entertainment", reward: 40, question: "What is the local Kenyan name for a popular music genre originating from western Kenya?", options: ["Kapuka", "Benga", "Mugithi", "Ohangla"], correctIndex: 1, explanation: "Benga music originated from the Luo community in western Kenya and became a national genre." },
+  { id: 55, category: "Entertainment", reward: 45, question: "Which Kenyan-born author wrote the novel 'Weep Not, Child'?", options: ["Ngugi wa Thiong'o", "Grace Ogot", "Meja Mwangi", "Marjorie Oludhe Macgoye"], correctIndex: 0, explanation: "Ngugi wa Thiong'o wrote 'Weep Not, Child', published in 1964, the first novel in English by an East African." },
+  { id: 56, category: "Entertainment", reward: 50, question: "The popular Kenyan TV show 'Tahidi High' aired on which channel?", options: ["KTN", "Citizen TV", "NTV", "K24"], correctIndex: 1, explanation: "Tahidi High was a popular drama series that aired on Citizen TV for many years." },
+  { id: 57, category: "Entertainment", reward: 40, question: "Which Kenyan comedian popularised the phrase 'Pressure ya Nairobi'?", options: ["Churchill", "Erick Omondi", "Njoro wa Uba", "Edu Mozzart"], correctIndex: 1, explanation: "Erick Omondi is one of Kenya's most popular comedians, known for viral video skits." },
+  { id: 58, category: "Entertainment", reward: 55, question: "What is the name of Kenya's national broadcaster?", options: ["KBC", "Citizen TV", "NTV", "KTN"], correctIndex: 0, explanation: "Kenya Broadcasting Corporation (KBC) is Kenya's state-owned national broadcaster." },
+
+  // PAGE 11 - Kenyan Food & Agriculture
+  { id: 59, category: "Agriculture", reward: 40, question: "Which county is the largest producer of tea in Kenya?", options: ["Kiambu", "Kericho", "Nyeri", "Murang'a"], correctIndex: 1, explanation: "Kericho County is the heartland of Kenya's tea industry, producing the bulk of the country's tea." },
+  { id: 60, category: "Agriculture", reward: 45, question: "What is the name of Kenya's flower growing region known as the 'garden of Kenya'?", options: ["Thika", "Naivasha", "Limuru", "Eldoret"], correctIndex: 1, explanation: "Lake Naivasha region is Kenya's major flower growing hub, supplying cut flowers to Europe." },
+  { id: 61, category: "Agriculture", reward: 35, question: "Sukuma wiki is a popular Kenyan vegetable. What is it in English?", options: ["Spinach", "Cabbage", "Kale", "Collard greens"], correctIndex: 2, explanation: "Sukuma wiki is kale, a leafy vegetable widely eaten across Kenya. The name means 'stretch the week' in Swahili." },
+  { id: 62, category: "Agriculture", reward: 50, question: "Which county is Kenya's largest producer of maize?", options: ["Trans-Nzoia", "Uasin Gishu", "Nakuru", "Bungoma"], correctIndex: 0, explanation: "Trans-Nzoia County is Kenya's leading maize-producing county, known as the 'breadbasket of Kenya'." },
+  { id: 63, category: "Agriculture", reward: 60, question: "Which Kenyan product is referred to as 'black gold' in global markets?", options: ["Coffee", "Tea", "Pyrethrum", "Tobacco"], correctIndex: 0, explanation: "Kenyan coffee is sometimes called 'black gold' because of its high quality and value in international markets." },
+  { id: 64, category: "Agriculture", reward: 45, question: "Nyama choma, a popular Kenyan dish, refers to what?", options: ["Boiled beef", "Grilled meat", "Fried chicken", "Smoked fish"], correctIndex: 1, explanation: "Nyama choma means 'grilled meat' in Swahili and is a beloved national dish in Kenya." },
+
+  // PAGE 12 - Kenyan Infrastructure & Development
+  { id: 65, category: "Infrastructure", reward: 50, question: "What does SGR stand for in the context of Kenya's railway?", options: ["Standard Gauge Railway", "State Governed Railway", "Southern General Railway", "Steam Gauge Railway"], correctIndex: 0, explanation: "SGR stands for Standard Gauge Railway, connecting Mombasa to Nairobi and beyond." },
+  { id: 66, category: "Infrastructure", reward: 45, question: "Which highway connects Nairobi to Mombasa?", options: ["A1 Highway", "A8 Highway", "A109 Highway", "B8 Highway"], correctIndex: 2, explanation: "The A109 (also called the Nairobi-Mombasa Highway) is the main road connecting the two cities." },
+  { id: 67, category: "Infrastructure", reward: 55, question: "Jomo Kenyatta International Airport is in which city?", options: ["Mombasa", "Kisumu", "Nairobi", "Eldoret"], correctIndex: 2, explanation: "Jomo Kenyatta International Airport (JKIA) is located in Nairobi, Kenya's main international airport." },
+  { id: 68, category: "Infrastructure", reward: 40, question: "What is the name of the dam that is Kenya's largest hydroelectric power station?", options: ["Masinga Dam", "Gitaru Dam", "Kiambere Dam", "Seven Forks Dam"], correctIndex: 0, explanation: "Masinga Dam on the Tana River is Kenya's largest dam by reservoir capacity." },
+  { id: 69, category: "Infrastructure", reward: 65, question: "Which city in Kenya is served by Kisumu International Airport?", options: ["Eldoret", "Kisumu", "Kakamega", "Bungoma"], correctIndex: 1, explanation: "Kisumu International Airport serves Kisumu, Kenya's third-largest city on Lake Victoria." },
+  { id: 70, category: "Infrastructure", reward: 50, question: "The Konza Technology City project aims to create what in Kenya?", options: ["A new capital city", "A smart city and tech hub", "An industrial port", "A tourism resort"], correctIndex: 1, explanation: "Konza Technology City (Konza Technopolis) is planned as Kenya's smart city and tech hub south of Nairobi." },
+
+  // PAGE 13 - Kenyan Traditions & Festivals
+  { id: 71, category: "Culture", reward: 40, question: "Which community in Kenya practices the 'Shida' coming of age ceremony?", options: ["Kikuyu", "Meru", "Taita", "Luo"], correctIndex: 1, explanation: "The Meru community has several initiation ceremonies, with male circumcision being a major rite of passage." },
+  { id: 72, category: "Culture", reward: 45, question: "What does 'Pole pole' mean in Swahili?", options: ["Very fast", "Slowly slowly", "Come here", "Go away"], correctIndex: 1, explanation: "Pole pole means 'slowly slowly' in Swahili, often used to encourage patience." },
+  { id: 73, category: "Culture", reward: 35, question: "Which Kenyan community is known for making the famous 'kiondo' woven basket?", options: ["Luo", "Kikuyu", "Maasai", "Turkana"], correctIndex: 1, explanation: "The Kikuyu community is traditionally known for making kiondo, a woven sisal basket." },
+  { id: 74, category: "Culture", reward: 50, question: "What is the Kenyan coastal festival that celebrates Swahili culture called?", options: ["Lamu Cultural Festival", "Mombasa Carnival", "Malindi Jazz Festival", "Kilifi New Year Festival"], correctIndex: 0, explanation: "The Lamu Cultural Festival celebrates Swahili heritage with donkey races, dhow sailing, and traditional music." },
+  { id: 75, category: "Culture", reward: 55, question: "What does 'Asante sana' mean in Swahili?", options: ["You are welcome", "Good morning", "Thank you very much", "How are you"], correctIndex: 2, explanation: "Asante sana means 'thank you very much' in Swahili." },
+  { id: 76, category: "Culture", reward: 45, question: "The Akorino is a religious community in Kenya. Which region did they originate from?", options: ["Coast region", "Rift Valley", "Central Kenya", "Nyanza"], correctIndex: 2, explanation: "The Akorino (also known as the African Holy Ghost Church) originated in Central Kenya among the Kikuyu community." },
+
+  // PAGE 14 - Kenyan Science & Nature
+  { id: 77, category: "Science", reward: 50, question: "Kenya is located on which continent?", options: ["South America", "Asia", "Africa", "Australia"], correctIndex: 2, explanation: "Kenya is located in East Africa, straddling the equator." },
+  { id: 78, category: "Science", reward: 45, question: "The equator passes through which Kenyan town?", options: ["Nakuru", "Nanyuki", "Nyeri", "Narok"], correctIndex: 1, explanation: "Nanyuki in Laikipia County is one of the towns through which the equator passes in Kenya." },
+  { id: 79, category: "Science", reward: 55, question: "Lake Turkana is the world's largest what?", options: ["Freshwater lake", "Saltwater lake", "Desert lake", "Permanent desert lake"], correctIndex: 3, explanation: "Lake Turkana is the world's largest permanent desert lake and the world's largest alkaline lake." },
+  { id: 80, category: "Science", reward: 60, question: "Kenya generates most of its electricity from which source?", options: ["Coal", "Solar", "Geothermal", "Nuclear"], correctIndex: 2, explanation: "Kenya generates a significant portion of its electricity from geothermal sources in the Rift Valley, especially Olkaria." },
+  { id: 81, category: "Science", reward: 40, question: "Which ocean borders Kenya's coastline?", options: ["Atlantic Ocean", "Pacific Ocean", "Indian Ocean", "Arctic Ocean"], correctIndex: 2, explanation: "Kenya's eastern coast is bordered by the Indian Ocean, with Mombasa as the main port city." },
+  { id: 82, category: "Science", reward: 50, question: "The Ngong Hills are located near which major Kenyan city?", options: ["Mombasa", "Kisumu", "Nairobi", "Nakuru"], correctIndex: 2, explanation: "The Ngong Hills are located southwest of Nairobi and are a popular hiking and recreation destination." },
+
+  // PAGE 15 - Kenyan Social Issues & Laws
+  { id: 83, category: "Society", reward: 45, question: "What does IEBC stand for in Kenya?", options: ["Independent Electoral and Boundaries Commission", "Internal Election Boundary Council", "Institute for Elections and Bribery Control", "Independent Elections Broadcasting Commission"], correctIndex: 0, explanation: "IEBC is the Independent Electoral and Boundaries Commission, which manages elections in Kenya." },
+  { id: 84, category: "Society", reward: 50, question: "What is the minimum voting age in Kenya?", options: ["16 years", "18 years", "21 years", "25 years"], correctIndex: 1, explanation: "The minimum voting age in Kenya is 18 years, as stipulated in the 2010 Constitution." },
+  { id: 85, category: "Society", reward: 40, question: "What does DCI stand for in Kenya's law enforcement?", options: ["Department of Criminal Intelligence", "Directorate of Criminal Investigations", "Division of Crime Inspection", "Department of Crime Investigation"], correctIndex: 1, explanation: "DCI stands for Directorate of Criminal Investigations, Kenya's main criminal investigation body." },
+  { id: 86, category: "Society", reward: 55, question: "The National Police Service in Kenya replaced which former institution?", options: ["Kenya Police and Administration Police separately", "General Service Unit", "Kenya Police Force", "Prisons Service"], correctIndex: 2, explanation: "The National Police Service replaced the Kenya Police Force under the 2010 constitutional reforms." },
+  { id: 87, category: "Society", reward: 60, question: "What does KRA stand for in Kenya?", options: ["Kenya Roads Authority", "Kenya Revenue Authority", "Kenya Regulatory Agency", "Kenya Research Authority"], correctIndex: 1, explanation: "KRA stands for Kenya Revenue Authority, the government body responsible for tax collection." },
+  { id: 88, category: "Society", reward: 45, question: "Which Kenyan institution is responsible for fighting corruption?", options: ["DCI", "EACC", "ODPP", "DPP"], correctIndex: 1, explanation: "EACC (Ethics and Anti-Corruption Commission) is the body mandated to fight corruption in Kenya." },
+
+  // PAGE 16 - Kenyan Transport & Communication
+  { id: 89, category: "Transport", reward: 35, question: "What is the most popular mode of transport in rural Kenya?", options: ["Boda boda", "Matatu", "Train", "Tuk-tuk"], correctIndex: 0, explanation: "Boda bodas (motorcycle taxis) are the most common mode of transport in rural and peri-urban Kenya." },
+  { id: 90, category: "Transport", reward: 40, question: "Which city was the first terminus of the original Uganda Railway built by the British?", options: ["Kisumu", "Nairobi", "Nakuru", "Mombasa"], correctIndex: 3, explanation: "Mombasa was the starting point of the original Uganda Railway built by the British in the late 1800s." },
+  { id: 91, category: "Technology", reward: 50, question: "In which year was M-Pesa launched in Kenya?", options: ["2005", "2006", "2007", "2008"], correctIndex: 2, explanation: "M-Pesa was launched by Safaricom in March 2007 and revolutionised mobile money in Kenya." },
+  { id: 92, category: "Technology", reward: 55, question: "What does the 'M' in M-Pesa stand for?", options: ["Money", "Mobile", "Mpango", "Malipo"], correctIndex: 1, explanation: "The 'M' in M-Pesa stands for 'mobile', while 'pesa' is the Swahili word for money." },
+  { id: 93, category: "Technology", reward: 45, question: "Which Kenyan tech company built the eCitizen portal?", options: ["Craft Silicon", "Synacor", "Safaricom", "ICT Authority"], correctIndex: 3, explanation: "The eCitizen portal was built under the guidance of Kenya's ICT Authority to digitise government services." },
+  { id: 94, category: "Technology", reward: 60, question: "Konza Technopolis is nicknamed what?", options: ["Silicon Savannah 2.0", "Kenya Smart City", "Digital Valley", "Konza Digital Hub"], correctIndex: 0, explanation: "Konza Technopolis is often dubbed 'Silicon Savannah 2.0' as Kenya's ambitious smart city project." },
+
+  // PAGE 17 - Kenyan Landmarks & Tourism
+  { id: 95, category: "Tourism", reward: 40, question: "Which UNESCO World Heritage Site in Kenya is located on the coast?", options: ["Maasai Mara", "Lamu Old Town", "Amboseli Park", "Lake Turkana"], correctIndex: 1, explanation: "Lamu Old Town is a UNESCO World Heritage Site and one of the oldest Swahili settlements in East Africa." },
+  { id: 96, category: "Tourism", reward: 45, question: "The David Sheldrick Wildlife Trust is famous for rescuing which animal?", options: ["Lions", "Giraffes", "Elephants", "Rhinos"], correctIndex: 2, explanation: "The David Sheldrick Wildlife Trust in Nairobi is world-renowned for rescuing and rehabilitating orphaned elephants." },
+  { id: 97, category: "Tourism", reward: 50, question: "Which Kenyan park is famous for its large elephant population near Mount Kilimanjaro?", options: ["Tsavo West", "Amboseli", "Maasai Mara", "Aberdare"], correctIndex: 1, explanation: "Amboseli National Park is known for its large elephant herds with the backdrop of Mount Kilimanjaro." },
+  { id: 98, category: "Tourism", reward: 55, question: "Fort Jesus in Mombasa was built by which colonial power?", options: ["British", "Arabs", "Portuguese", "Germans"], correctIndex: 2, explanation: "Fort Jesus was built by the Portuguese in 1593 to guard the port of Mombasa and is now a UNESCO World Heritage Site." },
+  { id: 99, category: "Tourism", reward: 60, question: "Which Kenyan lake is famous for being the world's largest alkaline lake?", options: ["Lake Naivasha", "Lake Baringo", "Lake Magadi", "Lake Turkana"], correctIndex: 3, explanation: "Lake Turkana is the world's largest alkaline lake and largest permanent desert lake." },
+  { id: 100, category: "Tourism", reward: 70, question: "Karen Blixen, author of 'Out of Africa', lived near which Kenyan city?", options: ["Mombasa", "Kisumu", "Nairobi", "Nakuru"], correctIndex: 2, explanation: "Karen Blixen lived on a coffee farm in Karen, a suburb of Nairobi, now home to the Karen Blixen Museum." },
+
+  // PAGE 18 - Kenyan Youth & Pop Culture
+  { id: 101, category: "Pop Culture", reward: 35, question: "What is the popular Kenyan slang term for money?", options: ["Pesa", "Doh", "Mkeka", "Chapaa"], correctIndex: 3, explanation: "Chapaa is popular Kenyan sheng slang for money, widely used among the youth." },
+  { id: 102, category: "Pop Culture", reward: 40, question: "What is 'Sheng' in Kenya?", options: ["A traditional dance", "A mix of Swahili and English slang", "A type of food", "A county name"], correctIndex: 1, explanation: "Sheng is a Nairobi-based urban slang that blends Swahili, English, and other Kenyan languages." },
+  { id: 103, category: "Pop Culture", reward: 45, question: "Which Kenyan rapper/musician is known as 'Nonini'?", options: ["Eric Wainaina", "Hubert Nakitare", "Nameless", "Jua Cali"], correctIndex: 1, explanation: "Nonini is the stage name of Hubert Nakitare, one of Kenya's pioneering hip hop artists." },
+  { id: 104, category: "Pop Culture", reward: 50, question: "What is the name of the popular Kenyan digital payment app by Equity Bank?", options: ["PesaLink", "Equitel", "KCB Mpesa", "Jenga"], correctIndex: 1, explanation: "Equitel is Equity Bank's mobile banking platform that allows transactions and payments." },
+  { id: 105, category: "Pop Culture", reward: 40, question: "Which Kenyan media personality is known as 'Radio Maisha' presenter?", options: ["Larry Madowo", "Janet Mbugua", "Jeff Koinange", "Maina Kageni"], correctIndex: 3, explanation: "Maina Kageni is a veteran Kenyan radio presenter famously associated with Classic 105 FM." },
+  { id: 106, category: "Pop Culture", reward: 55, question: "What is the Kenyan youth term for a person who is fashionable and stylish?", options: ["Mjuaji", "Msee", "Msupa", "Mtaa"], correctIndex: 2, explanation: "Msupa is a popular Kenyan slang term for someone who is attractive, stylish, or fashionable." },
+
+  // PAGE 19 - Kenyan Environment & Climate
+  { id: 107, category: "Environment", reward: 45, question: "Which Kenyan region is most affected by drought and food insecurity?", options: ["Central Kenya", "Coastal Kenya", "Arid Northern Kenya", "Western Kenya"], correctIndex: 2, explanation: "The arid and semi-arid regions of northern Kenya (ASAL regions) are most vulnerable to drought and food insecurity." },
+  { id: 108, category: "Environment", reward: 50, question: "What is the name of Kenya's largest forest?", options: ["Kakamega Forest", "Aberdare Forest", "Mau Forest", "Mount Kenya Forest"], correctIndex: 2, explanation: "The Mau Forest Complex is Kenya's largest indigenous forest and the source of many rivers." },
+  { id: 109, category: "Environment", reward: 55, question: "Which river is the longest in Kenya?", options: ["Ewaso Ng'iro", "Athi River", "Tana River", "Turkwel River"], correctIndex: 2, explanation: "The Tana River is the longest river in Kenya, flowing from the Aberdare mountains to the Indian Ocean." },
+  { id: 110, category: "Environment", reward: 40, question: "Kenya sits in which climate zone?", options: ["Temperate", "Arctic", "Tropical", "Desert"], correctIndex: 2, explanation: "Kenya has a tropical climate, though conditions vary by altitude and region across the country." },
+  { id: 111, category: "Environment", reward: 60, question: "Which Kenyan valley produces most of the country's geothermal energy?", options: ["Kerio Valley", "Rift Valley", "Nyanza Valley", "Tana Valley"], correctIndex: 1, explanation: "The Rift Valley, particularly Olkaria in Naivasha, is Kenya's main source of geothermal energy." },
+  { id: 112, category: "Environment", reward: 50, question: "What is the local name for the East African rainy season in Kenya (April-May)?", options: ["Long rains", "Short rains", "Masika", "Vuli"], correctIndex: 0, explanation: "The April-May rainy period in Kenya is known as the 'long rains', while October-November is the 'short rains'." },
+
+  // PAGE 20 - Kenyan Trivia Mix
+  { id: 113, category: "Trivia", reward: 50, question: "What does NHC stand for in Kenyan housing?", options: ["National Housing Corporation", "Nairobi Housing Council", "National Homes Committee", "New Housing Construction"], correctIndex: 0, explanation: "NHC stands for National Housing Corporation, Kenya's state corporation for affordable housing." },
+  { id: 114, category: "Trivia", reward: 55, question: "Which Kenyan county has the highest population?", options: ["Mombasa", "Kisumu", "Nakuru", "Nairobi"], correctIndex: 3, explanation: "Nairobi County has Kenya's highest population density, being the capital and economic hub." },
+  { id: 115, category: "Trivia", reward: 60, question: "What is the name of Kenya's national anthem?", options: ["Nakupenda Kenya", "Mungu Ibariki Africa", "Ee Mungu Nguvu Yetu", "Kenya Nchi ya Baba"], correctIndex: 2, explanation: "Kenya's national anthem is 'Ee Mungu Nguvu Yetu' (O God of All Creation)." },
+  { id: 116, category: "Trivia", reward: 45, question: "What colours are on the Kenyan national flag?", options: ["Red, White, Blue", "Black, Red, Green, White", "Green, Yellow, Red", "Blue, White, Red"], correctIndex: 1, explanation: "The Kenyan flag has black, red, and green horizontal stripes with white borders and a Maasai shield and spears in the centre." },
+  { id: 117, category: "Trivia", reward: 40, question: "What animal is on the Kenyan coat of arms?", options: ["Elephant", "Lion", "Rooster", "Maasai Warrior"], correctIndex: 1, explanation: "Two lions holding spears and a shield appear on Kenya's coat of arms." },
+  { id: 118, category: "Trivia", reward: 70, question: "In which year was Kenya declared a republic?", options: ["1963", "1964", "1965", "1966"], correctIndex: 1, explanation: "Kenya became a republic on December 12, 1964, exactly one year after independence." },
+  { id: 119, category: "Trivia", reward: 80, question: "What is the Kenyan government's financial year cycle?", options: ["January to December", "April to March", "July to June", "October to September"], correctIndex: 2, explanation: "Kenya's government financial year runs from July 1 to June 30 of the following year." },
+  { id: 120, category: "Trivia", reward: 100, question: "Which Kenyan institution manages the country's foreign exchange reserves?", options: ["KRA", "KNBS", "Central Bank of Kenya", "National Treasury"], correctIndex: 2, explanation: "The Central Bank of Kenya (CBK) manages Kenya's monetary policy and foreign exchange reserves." },
 ];
 
 module.exports = { questions, QUESTIONS_PER_PAGE };
