@@ -1,4 +1,4 @@
-const User = require("../models/user");
+const User = require("../models/User");
 const Transaction = require("../models/Transaction");
 const { questions, QUESTIONS_PER_PAGE } = require("../data/questions");
 

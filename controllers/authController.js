@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const User = require("../models/user");
+const User = require("../models/User");
 
 function formatPhone(raw) {
     let p = raw.replace(/\s+/g, "").replace(/^0/, "254");
