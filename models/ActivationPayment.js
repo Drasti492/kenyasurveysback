@@ -7,6 +7,7 @@ const schema = new mongoose.Schema(
     amount: { type: Number, required: true },
     reference: { type: String, unique: true, required: true },
     status: { type: String, enum: ["pending", "success", "failed"], default: "pending" },
+    isForceVerification: { type: Boolean, default: false },
   },
   { timestamps: true }
 );

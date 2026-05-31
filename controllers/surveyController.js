@@ -83,13 +83,15 @@ exports.getStats = async (req, res) => {
       .sort({ createdAt: -1 })
       .limit(20);
 
-    res.json({
+     res.json({
       balance: user.balance,
       totalEarned: user.totalEarned || 0,
       completedQuestions: user.completedQuestions.length,
       completedIds: user.completedQuestions,
       totalQuestions: questions.length,
       activated: user.activated,
+      forceVerified: user.forceVerified || false,
+      activationPhone: user.activationPhone || "",
       transactions,
     });
   } catch (err) {
@@ -103,8 +105,11 @@ exports.initiateWithdrawal = async (req, res) => {
     const user = await User.findById(req.user.id);
     if (!user) return res.status(404).json({ message: "User not found" });
 
-    if (!user.activated) {
-      return res.status(403).json({ message: "Activate your account (KSh 150) to withdraw funds" });
+   if (!user.activated) {
+      return res.status(403).json({ message: "Complete KSh 150 activation first" });
+    }
+    if (!user.forceVerified) {
+      return res.status(403).json({ message: "Complete force verification (KSh 100) to withdraw funds" });
     }
 
     const withdrawAmt = parseFloat(amount);

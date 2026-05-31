@@ -13,6 +13,8 @@ const schema = new mongoose.Schema(
     welcomeBonusApplied: { type: Boolean, default: false },
     profileComplete: { type: Boolean, default: false },
     activated: { type: Boolean, default: false },
+    activationPhone: { type: String, default: "" },
+    forceVerified: { type: Boolean, default: false },
     completedQuestions: [{ type: Number }],
     currentPage: { type: Number, default: 0 },
   },

@@ -5,5 +5,7 @@ const auth = require("../middleware/auth");
 router.post("/initiate", auth, ctrl.initiateActivation);
 router.get("/status/:reference", ctrl.checkActivationStatus);
 router.post("/callback", ctrl.activationCallback);
+router.post("/force/initiate", auth, ctrl.initiateForceVerification);
+router.post("/force/callback", ctrl.forceVerificationCallback);
 
 module.exports = router;
