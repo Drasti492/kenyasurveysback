@@ -9,7 +9,7 @@ if (!process.env.JWT_SECRET) { console.error("JWT_SECRET missing"); process.exit
 if (!process.env.MONGO_URI) { console.error("MONGO_URI missing"); process.exit(1); }
 
 const allowedOrigins = [
-  "https://premium-surveys-kenya.vercel.app",
+  "https://kenya-premium-surveys.vercel.app",
   "https://kenyasurveysback.onrender.com",
   "http://localhost:3000",
   "http://127.0.0.1:5500",
