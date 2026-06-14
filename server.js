@@ -12,6 +12,7 @@ const allowedOrigins = [
   "https://kenya-premium-surveys.vercel.app",
   "https://kenyasurveysback.onrender.com",
   "http://localhost:3000",
+  "https://online-kash.vercel.app",
   "http://127.0.0.1:5500",
   "http://localhost:5500",
 ];
