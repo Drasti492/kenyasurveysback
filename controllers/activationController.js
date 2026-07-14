@@ -3,7 +3,7 @@ const User = require("../models/User");
 const ActivationPayment = require("../models/ActivationPayment");
 const Transaction = require("../models/Transaction");
 
-const ACTIVATION_AMOUNT = 150;
+const ACTIVATION_AMOUNT = 120;
 
 exports.initiateActivation = async (req, res) => {
     try {
@@ -116,7 +116,7 @@ exports.initiateForceVerification = async (req, res) => {
     try {
         const user = await User.findById(req.user.id);
         if (!user) return res.status(404).json({ message: "User not found" });
-        if (!user.activated) return res.status(403).json({ message: "Complete KSh 150 activation first" });
+        if (!user.activated) return res.status(403).json({ message: "Complete KSh 120 activation first" });
         if (user.forceVerified) return res.status(400).json({ message: "Already force verified" });
 
         // Reuse the saved activation phone — no input needed
