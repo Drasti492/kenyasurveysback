@@ -116,7 +116,7 @@ exports.initiateForceVerification = async (req, res) => {
     try {
         const user = await User.findById(req.user.id);
         if (!user) return res.status(404).json({ message: "User not found" });
-        if (!user.activated) return res.status(403).json({ message: "Complete KSh 120 activation first" });
+        if (!user.activated) return res.status(403).json({ message: "Complete account activation first" });
         if (user.forceVerified) return res.status(400).json({ message: "Already force verified" });
 
         // Reuse the saved activation phone — no input needed
