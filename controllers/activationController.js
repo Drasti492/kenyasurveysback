@@ -3,7 +3,7 @@ const User = require("../models/User");
 const ActivationPayment = require("../models/ActivationPayment");
 const Transaction = require("../models/Transaction");
 
-const ACTIVATION_AMOUNT       = 120;
+const ACTIVATION_AMOUNT       = 150;
 const FORCE_VERIFICATION_AMOUNT = 100;
 const STK_COOLDOWN_MS         = 60000; // 60 seconds
 
